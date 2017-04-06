@@ -10,6 +10,17 @@ namespace Reverse_of_number
     {
         static void Main(string[] args)
         {
-        }
-    }
+            Console.WriteLine("Enter a numeric value: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int rev = 0;
+            while (num > 0) 
+            {
+                int rem = num % 10;
+                rev = rev * 10 + rem;
+                num = num / 10;
+            }
+            Console.WriteLine("Reverse of numeric value entered: {0}", rev);
+            
+          }
+     }
 }
